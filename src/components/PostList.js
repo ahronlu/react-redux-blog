@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Icon, Item, List } from "semantic-ui-react";
-import { fetchPosts } from "../actions";
+import { fetchPostsAndUsers } from "../actions";
 import UserHeader from "./UserHeader";
 
 const PostList = () => {
@@ -10,7 +10,7 @@ const PostList = () => {
   const posts = useSelector((state) => state.posts);
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPostsAndUsers());
   }, [dispatch]);
 
   return (
